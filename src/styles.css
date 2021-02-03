@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Vibur', cursive;
+  font-size: 1rem;
+  background-image: radial-gradient(
+    rgb(44, 47, 77),
+    rgb(40, 43, 70),
+    rgb(36, 38, 63),
+    rgb(32, 34, 56),
+    rgb(28, 30, 49),
+    rgb(24, 26, 42),
+    rgb(20, 21, 35),
+    rgb(16, 17, 28),
+    rgb(12, 13, 21),
+    rgb(8, 9, 14),
+    rgb(4, 4, 7),
+    rgb(0, 0, 0)
+  );
+  position: relative;
+  height: 100vh;
+  margin: 0;
+}
+
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field:nth-child(-n + 3) {
+  margin-right: 20px;
+}
+
+.label,
+.value {
+  font-size: 4rem;
+  text-align: center;
+  color: #c6e2ff;
+  animation: neon 0.08s ease-in-out infinite alternate;
+}
+
+.label {
+  font-size: 2rem;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+      0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+      0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px rgba(30, 132, 242, 1);
+  }
+}
+
+@keyframes neon-red {
+  from {
+    text-shadow: 0 0 6px rgba(228, 82, 82, 0.657),
+      0 0 30px rgba(253, 87, 87, 0.801), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(238, 79, 64, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(228, 46, 46, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(226, 104, 104, 0.794),
+      0 0 30px rgba(231, 70, 70, 0.692), 0 0 12px rgba(30, 132, 242, 0.58),
+      0 0 22px rgba(224, 66, 27, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px rgb(242, 30, 30);
+  }
+}
